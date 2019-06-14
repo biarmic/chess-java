@@ -89,7 +89,4 @@ public abstract class Piece extends JLabel{
 	public ArrayList<Position> getRange(boolean isWhite) throws IOException {
 		return board.getRange(this);
 	}
-	public void updateBoard(Notation board) {
-		
-	}
 }
