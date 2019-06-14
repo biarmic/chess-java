@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class King extends Piece{
 	public King(boolean isWhite, int row, int column) throws IOException {
