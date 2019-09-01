@@ -1,7 +1,5 @@
-import java.io.IOException;
-
 public class King extends Piece{
-	public King(boolean isWhite, int row, int column) throws IOException {
+	public King(boolean isWhite, int row, int column) {
 		super(isWhite,row,column,isWhite ? "king_white.png" : "king_black.png");
 	}
 	public void doesCastle(int row, int column, boolean isWhite) {

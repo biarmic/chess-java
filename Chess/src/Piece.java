@@ -11,8 +11,12 @@ public abstract class Piece extends JLabel{
 	private int row;
 	private int column;
 	private boolean isEaten;
-	public Piece(boolean isWhite, int row, int column, String fileName) throws IOException {
-		setIcon(new ImageIcon(ImageIO.read(getClass().getResource(fileName))));
+	public Piece(boolean isWhite, int row, int column, String fileName) {
+		try {
+			setIcon(new ImageIcon(ImageIO.read(getClass().getResource(fileName))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		this.isWhite = isWhite;
 		this.row = row;
 		this.column = column;

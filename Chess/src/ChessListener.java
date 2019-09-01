@@ -40,7 +40,7 @@ public class ChessListener implements MouseMotionListener, MouseListener{
 			rangePiece.doesEat(y/100,x/100);
 			if(rangePiece instanceof King)
 				((King)rangePiece).doesCastle(y/100,x/100,turnOfWhite);
-			((JLayeredPane) rangePiece.getParent()).setLayer(rangePiece,JLayeredPane.PALETTE_LAYER);
+			((JLayeredPane) rangePiece.getParent()).setLayer(rangePiece,new Integer(1));
 			rangePiece.setPosition(y/100,x/100);
 			hideRange();
 			range = null;
@@ -54,7 +54,7 @@ public class ChessListener implements MouseMotionListener, MouseListener{
 	public void mouseDragged(MouseEvent event) {
 		if(event.getSource() instanceof Piece && ((Piece) event.getSource()).isWhite()==turnOfWhite) {
 			setSource(event);
-			((JLayeredPane) source.getParent()).setLayer(source,JLayeredPane.POPUP_LAYER);
+			((JLayeredPane) source.getParent()).setLayer(source,new Integer(3));
 			source.setLocation(x,y);
 			dragged = true;
 		}
@@ -90,13 +90,13 @@ public class ChessListener implements MouseMotionListener, MouseListener{
 			}else {
 				source.returnPrevPosition();
 			}
-			((JLayeredPane) source.getParent()).setLayer(source,JLayeredPane.PALETTE_LAYER);
+			((JLayeredPane) source.getParent()).setLayer(source,new Integer(1));
 			dragged = false;
 		}
 	}
 	private void revealRange() {
 		for(Position a : range) {
-			((JLayeredPane)source.getParent()).add(a,JLayeredPane.MODAL_LAYER);
+			((JLayeredPane)source.getParent()).add(a,new Integer(2));
 		}
 		rangeRevealed = true;
 	}
