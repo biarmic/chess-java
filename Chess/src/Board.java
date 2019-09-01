@@ -10,7 +10,7 @@ public class Board {
 	public Board() {
 		JLabel boardBG = new JLabel();
 		try {
-			boardBG.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("board.png"))));
+			boardBG.setIcon(new ImageIcon(ImageIO.read(getClass().getResource("images/board.png"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

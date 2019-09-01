@@ -13,7 +13,7 @@ public abstract class Piece extends JLabel{
 	private boolean isEaten;
 	public Piece(boolean isWhite, int row, int column, String fileName) {
 		try {
-			setIcon(new ImageIcon(ImageIO.read(getClass().getResource(fileName))));
+			setIcon(new ImageIcon(ImageIO.read(getClass().getResource("images/"+fileName))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
