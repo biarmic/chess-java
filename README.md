@@ -1,4 +1,3 @@
-# chess-java
 ### Features
 * Able to undo moves
 * Dynamic save and load system
