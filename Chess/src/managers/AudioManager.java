@@ -15,12 +15,12 @@ public class AudioManager {
 	public static boolean SOUND;
 	public static boolean CHESSMASTER_FX;
 	public AudioManager() {
-		soundList.put("move",(new File("src/sounds/move.wav")));
-		chessmasterList.put("white-move",(new File("src/sounds/chessmaster/white-move.wav")));
-		chessmasterList.put("black-move",(new File("src/sounds/chessmaster/black-move.wav")));
-		chessmasterList.put("eat",(new File("src/sounds/chessmaster/eat.wav")));
-		chessmasterList.put("check",(new File("src/sounds/chessmaster/check.wav")));
-		chessmasterList.put("checkmate",(new File("src/sounds/chessmaster/checkmate.wav")));
+		soundList.put("move",(new File("Chess/src/sounds/move.wav")));
+		chessmasterList.put("white-move",(new File("Chess/src/sounds/chessmaster/white-move.wav")));
+		chessmasterList.put("black-move",(new File("Chess/src/sounds/chessmaster/black-move.wav")));
+		chessmasterList.put("eat",(new File("Chess/src/sounds/chessmaster/eat.wav")));
+		chessmasterList.put("check",(new File("Chess/src/sounds/chessmaster/check.wav")));
+		chessmasterList.put("checkmate",(new File("Chess/src/sounds/chessmaster/checkmate.wav")));
 	}
 	public static void playSound(String key) {
 		if(SOUND) {
