@@ -82,7 +82,6 @@ public class Screen extends JFrame {
 
 	public static void setClickable(boolean clickable) {
 		((JPanel) screen.getGlassPane()).setVisible(!clickable);
-		;
 	}
 
 	public static void main(String[] args) {
